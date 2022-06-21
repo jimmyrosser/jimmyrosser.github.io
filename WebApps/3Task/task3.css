@@ -1,0 +1,324 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    background-color: #1C3144;
+    color: white;
+    /*mix-blend-mode: difference;*/
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+table th {
+    text-align: center;
+    cursor: pointer;
+    background: -webkit-linear-gradient(white, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table td {
+    font-size: 16px;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 10px;
+}
+
+table tr:hover:not(.header) {
+    background-color: dimgray;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#BaseballStats {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    background: -webkit-linear-gradient(red, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.searchTeams {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.searchTeams h5 {
+    margin: 0;
+}
+
+.searchWins {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 6%;
+}
+
+.searchWins h5 {
+    margin: 0;
+}
+
+.searchLosses {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 14%;
+}
+
+.searchLosses h5 {
+    margin: 0;
+}
+
+.searchInningsPitched {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 22%;
+}
+
+.searchInningsPitched h5 {
+    margin: 0;
+}
+
+.searchHits {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 31.5%;
+}
+
+.searchHits h5 {
+    margin: 0;
+}
+
+.searchRuns {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 39.5%;
+}
+
+.searchRuns h5 {
+    margin: 0;
+}
+
+.searchER {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 49%;
+}
+
+.searchER h5 {
+    margin: 0;
+}
+
+.searchWalks {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 58.5%;
+}
+
+.searchWalks h5 {
+    margin: 0;
+}
+
+.searchStrikeouts {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 8%;
+    top: 0;
+}
+
+.searchStrikeouts h5 {
+    margin: 0;
+}
+
+.searchSaves {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 17%;
+}
+
+.searchSaves h5 {
+    margin: 0;
+}
+
+.searchBlownSaves {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 25%;
+}
+
+.searchBlownSaves h5 {
+    margin: 0;
+}
+
+.searchHolds {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 33.5%;
+}
+
+.searchHolds h5 {
+    margin: 0;
+}
+
+.searchQS {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 41.5%;
+}
+
+.searchQS h5 {
+    margin: 0;
+}
+
+.searchHB {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 49.5%;
+}
+
+.searchHB h5 {
+    margin: 0;
+}
+
+.searchHR {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 57.5%;
+}
+
+.searchHR h5 {
+    margin: 0;
+}
+
+.searchGS {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 67.5%;
+}
+
+.searchGS h5 {
+    margin: 0;
+}
+
+.searchSO {
+    border: 1.5px solid black;
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 0;
+    margin-top: 77%;
+}
+
+.searchSO h5 {
+    margin: 0;
+}
+
+
+

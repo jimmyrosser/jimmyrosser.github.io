@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+
+    .axis { font: 10px sans-serif }
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    </style>
+</head>
+
+<body>
+<!--Title-->
+<h1>Current Temperature and Cups of Coffee Consumed Per Day</h1>
+
+<!--Get d3 source-->
+<script src = "https://d3js.org/d3.v5.min.js"></script>
+
+<script>
+//Set size parameters
+var margin = { top:20, right:20, bottom:70, left:40 },
+    width = 600 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+//Get data
+d3.csv("data.csv").then(function (data) {
+    data.forEach(function(d) {
+        d.coffee = +d.coffee;
+        d.temp = +d.temp;
+    });
+    console.log(data);
+
+//Define x and y datatypes
+var x = d3.scaleBand().range([width, 0]);
+var y = d3.scaleLinear().range([height, 0]);
+
+//Set axis location and ticks
+var xAxis = d3.axisBottom(x)
+    .ticks(10);
+var yAxis = d3.axisLeft(y)
+    .ticks(10);
+
+//Create svg
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    //Set the domains of x and y
+    x.domain(d3.range(69, 90).reverse());
+    y.domain([0, d3.max(data, function(d) {return d.coffee;})]);
+
+    //Add x axis to svg
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", "-.55em")
+        .attr("transform", "rotate(-90)");
+
+    //Add y axis to svg
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end");
+
+    //Add y axis label
+    svg.append("text")
+        .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top + 20) + ")")
+        .style("text-anchor", "middle")
+        .text("Current Temperature");
+
+    //Add x axis label
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left - 5)
+        .attr("x", 0 - (height/2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Cups of Coffee Consumed Per Day");
+
+    //Add rectangles for bar graph
+    svg.selectAll("bar")
+        .data(data)
+        .enter().append("rect")
+        .style("fill", "steelblue")
+        .attr("x", function(d) {return x(d.temp);})
+        .attr("width", x.bandwidth())
+        .attr("y", function(d) {return y(d.coffee);})
+        .attr("height", function(d) {return height-y(d.coffee);});
+});
+</script>
+</body>

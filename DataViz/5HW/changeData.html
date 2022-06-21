@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.area {
+    fill: steelblue;
+    stroke-width: 0;
+}
+
+</style>
+<body>
+
+<div id="option">
+    <input name="updateButton" 
+           type="button" 
+           value="Change Data" 
+           onclick="updateData()" />
+</div>
+
+<script type ="text/javascript" src = "./changeData.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+.canvasContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.canvas {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: solid white;
+}
+
+body {
+    background-image: url("./background.jpg");
+}
+
+h1, h3, h4 {
+    color: white;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.levelSelector {
+    width: 160px;
+    display: none;
+}
+
+#level {
+    display: none;
+}
+
+#clearCanvasButton {
+    width: 145px;
+    display: none;
+}
+
+#checkAnswerButton {
+    width: 145px;
+    display: none;
+}

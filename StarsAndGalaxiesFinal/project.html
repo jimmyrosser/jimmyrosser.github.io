@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./project.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="instructions">
+        <h1>How Big is the Universe?</h1>
+        <select name="level" id="level" onchange="updateFromSelection()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+        </select>
+        <br>
+        <button type="button" onclick="previousLevel()" class="levelSelector" id="levelSelectorPrev">Previous Level</button>
+        <button type="button" onclick="nextLevel()" class="levelSelector" id="levelSelectorNext">Next Level</button>
+        <h3 id="levelTitleText"></h3>
+        <h3 id="levelDescriptionText">Please click the begin button</h3>
+        <button type="button" onclick="begin()" id="beginButton">Begin</button>
+        <h4 id="answerResult"></h4>
+        <button type="button" onclick="getCircle()" id="checkAnswerButton">Check Answer</button>
+        <button type="button" onclick="clearCanvas()" id="clearCanvasButton">Clear Canvas</button>
+        </div>
+        <div class="canvasContainer" id="canvasContainer">
+            <canvas class="canvas" id="canvas1" width="500" height="500"></canvas>
+            <canvas class="canvas" id="canvas2" width="500" height="500"></canvas>
+        </div>
+    </body>
+    <footer>
+        <script type="text/javascript" src="./circleCalculations.js"></script>
+        <script type="text/javascript" src="./story.js"></script>
+    </footer>
+</html>

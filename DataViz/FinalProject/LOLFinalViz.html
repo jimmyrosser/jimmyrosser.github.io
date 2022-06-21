@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<style>
+.d3-tip {
+  position: absolute;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+</style>
+<body>
+   <h1>League Of Legends Ban Data</h1>
+   <p>Visualization By: Jimmy Rosser, Jacob Rivera, Martin Gordon, Lizzie Ruetschle<p></p>
+   <p>This is a visualization of champion data from League of Legends. <br> It displays the number of times a champion was banned in a large set of matches. <br> The user can filter the dataset by lane to see which champions are most commonly used in that lane and which are banned the most.</p>
+   <p>Choose a selection from the drop down menu to filter the dataset of champions by lane.</p>
+   <label for="lanes">Choose a Lane:</label>
+    <select name="lanes" id="lanes" onchange="selectionChanged()">
+      <option value="All">All</option>
+      <option value="TOP">Top</option>
+      <option value="JUNGLE">Jungle</option>
+      <option value="MID">Mid</option>
+      <option value="BOT">Bottom</option>
+    </select>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <script src="./LOLFinalViz.js"></script>
+	<div> 
+		<p>About Our Project:</p>
+    <p>The data set we used was created by Paolo Campanelli on Kaggle. It was data pulled from 180,000 League of Legends ranked matches from 2014 to 2016.<br>
+        Interesting Finds: We noticed a correlation between the number of times a champion is played and the number of times they are banned.<br>
+        Interesting Data Issue: We went through multiple datasets before finding the one used in the above visualization. Many of these datasets were too large to load in a reasonable amount of time.<br>
+        Improvements: Adding a meningful color gradient and more information to to the tooltip would allow the user to interpret and explore the data easier.</p>
+	</div>
+</body>
+</html>
+
+<!--http://cs.trinity.edu/~eruetsch/dataVis/FinalProject/d3LOL.html>
